@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif; /* Font de la página */
+        background-color: #e3e3e3; /* Color del fondo */
+        margin: 0;
+        padding: 20px; /* Relleno */
+      }
+      .container {
+        /* Centrar la tabla -formulario- en el centro de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      table {
+        background-color: rgb(255, 255, 255); /* Color de fondo */
+        border-collapse: collapse; /* Quitar borde doble */
+        border: rgb(193, 192, 192); /* Color del borde */
+      }
+      td {
+        padding: 10px;
+      }
+      input {
+        padding: 10px;
+        border: none;
+        background-color: rgb(239, 239, 239);
+      }
+      .boton {
+        background-color: #007bff; /* Fondo de los botones */
+        color: white; /* Color de letra de los botones */
+        border: none; /* Quitamos el borde */
+        padding: 5px 20px;
+        cursor: pointer; /* Reacción del cursor al pasar por encima */
+      }
+      .boton:hover {
+        background-color: rgb(
+          37,
+          79,
+          249
+        ); /* Cambio de color al pasar por encima */
+      }
+      .opciones {
+        padding: 3px;
+        color: #007bff;
+        background-color: rgb(239, 239, 239);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <table border="1px">
+          <tr>
+            <td>Nombre:</td>
+            <td>
+              <input type="text" id="nombre" name="nombre" /> F.Nac.:
+              <input
+                type="text"
+                id="fecha_nacimiento"
+                name="fecha_nacimiento"
+                size="10"
+                placeholder="dd/mm/aa"
+              />
+              DNI:
+              <input
+                type="text"
+                id="dni"
+                name="dni"
+                size="9"
+                placeholder="12345678A"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Apellidos:</td>
+            <td>
+              <input type="text" id="apellidos" name="apellidos" size="58" />
+            </td>
+          </tr>
+          <tr>
+            <td>Calle y número:</td>
+            <td>
+              <input type="text" id="direccion" name="direccion" size="58" />
+            </td>
+          </tr>
+          <tr>
+            <td>Código Postal</td>
+            <td>
+              <input type="text" id="postal" name="postal" size="5" /> Ciudad:
+              <input type="text" id="ciudad" size="35" />
+            </td>
+          </tr>
+          <tr>
+            <td>Provincia</td>
+            <td>
+              <input type="text" id="provincia" name="provincia" /> Teléfono:
+              <input type="text" id="telf" size="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>Opción</td>
+            <td>
+              <select name="opciones" class="opciones">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+              </select>
+              <i>Escoja una opción</i>
+            </td>
+          </tr>
+          <tr>
+            <td>Comentarios personales:</td>
+            <td>
+              <textarea
+                id="comentarios"
+                name="comentarios"
+                placeholder="Escriba su mensaje aquí"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Pulse aquí:</b></td>
+            <td>
+              <center>
+                <input
+                  type="submit"
+                  id="enviar"
+                  class="boton"
+                  name="enviar"
+                  value="Enviar datos"
+                />
+                <input
+                  type="reset"
+                  id="borrar"
+                  class="boton"
+                  name="borrar"
+                  value="Borrar los datos"
+                />
+              </center>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

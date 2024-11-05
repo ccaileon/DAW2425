@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <!-- Fuentes consultadas 
+     https://www.w3schools.com/css/css_table.asp (Quitar el borde de la tabla)-->
+ <style>
+    body {
+      font-family: Arial, sans-serif; /* Font de la página */
+      background-color: #ebebeb; /* Color del fondo */
+      margin: 0;
+      padding: 20px; /* Relleno */
+    }
+
+    table {
+      width: 100%; /* Ancho de la tabla */
+      border-collapse: collapse; /* Quitar el doble borde que viene por defecto */
+      border-color: rgb(43, 66, 117); /* Color para el borde */
+    }
+
+    th, td {
+      padding: 10px; /* Espacio dentro de las celdas */
+      text-align: center; /* Alineación del texto hacia el centro */
+    }
+
+    th {
+      background-color: #007bff; /* Fondo de los encabezados de la tabla */
+      color: white; /* Color de la letra */
+    }
+
+    img {
+      max-width: 80px; /* Ponemos las imagenes un poco más pequeñas para que quede mejor */
+    }
+  </style>
+    <title>Redes Sociales</title>
+  </head>
+  <body>
+    <table border="1px">
+      <tr>
+        <th colspan="2">Nombre</th>
+        <th>¿Tengo cuenta?</th>
+        <th>Valoración</th>
+        <th>Dirección</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Facebook</th>
+        <td rowspan="2"><img src="imagenes/1352718801_FacebookShop.png" /></td>
+        <td rowspan="2">
+          <center>
+            <input
+              type="text"
+              id="cuenta"
+              maxlength="2"
+              size="2"
+              placeholder="Si/No"
+            />
+          </center>
+        </td>
+        <td>
+          <div id="estrellasFacebook"><i>Introduce una puntuación</i></div>
+        </td>
+        <td rowspan="2"><a href="www.facebook.com">www.facebook.com</a></td>
+      </tr>
+      <tr>
+        <td>
+          <center>
+            <input
+              type="number"
+              id="puntuacionFacebook"
+              name="puntuacionFacebook"
+              size="3"
+              class="puntuacion"
+              min="0"
+              max="5"
+              oninput="puntuar('estrellasFacebook', 'puntuacionFacebook')"
+            />/5
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">Flickr</th>
+        <td rowspan="2"><img src="imagenes/1352718827_flickrshop.png" /></td>
+        <td rowspan="2">
+          <center>
+            <input
+              type="text"
+              id="cuenta"
+              maxlength="2"
+              size="2"
+              placeholder="Si/No"
+            />
+          </center>
+        </td>
+        <td>
+          <div id="estrellasFlickr"><i>Introduce una puntuación</i></div>
+        </td>
+        <td rowspan="2"><a href="www.flickr.com">www.flickr.com</a></td>
+      </tr>
+      <tr>
+        <td>
+          <center>
+            <input
+              type="number"
+              id="puntuacionFlickr"
+              name="puntuacionFlickr"
+              size="3"
+              class="puntuacion"
+              min="0"
+              max="5"
+              oninput="puntuar('estrellasFlickr', 'puntuacionFlickr')"
+            />/5
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">Vimeo</th>
+        <td rowspan="2"><img src="imagenes/1352718818_vimeoshop.png" /></td>
+        <td rowspan="2">
+          <center>
+            <input
+              type="text"
+              id="cuenta"
+              maxlength="2"
+              size="2"
+              placeholder="Si/No"
+            />
+          </center>
+        </td>
+        <td>
+          <div id="estrellasVimeo"><i>Introduce una puntuación</i></div>
+        </td>
+        <td rowspan="2"><a href="www.vimeo.com">www.vimeo.com</a></td>
+      </tr>
+      <tr>
+        <td>
+          <center>
+            <input
+              type="number"
+              id="puntuacionVimeo"
+              name="puntuacionVimeo"
+              size="3"
+              class="puntuacion"
+              min="0"
+              max="5"
+              oninput="puntuar('estrellasVimeo', 'puntuacionVimeo')"
+            />/5
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">Youtube</th>
+        <td rowspan="2"><img src="imagenes/1352718809_youtube_shop.png" /></td>
+        <td rowspan="2">
+          <center>
+            <input
+              type="text"
+              id="cuenta"
+              maxlength="2"
+              size="2"
+              placeholder="Si/No"
+            />
+          </center>
+        </td>
+        <td>
+          <div id="estrellasYoutube"><i>Introduce una puntuación</i></div>
+        </td>
+        <td rowspan="2"><a href="www.youtube.com">www.youtube.com</a></td>
+      </tr>
+      <tr>
+        <td>
+          <center>
+            <input
+              type="number"
+              id="puntuacionYoutube"
+              name="puntuacionYoutube"
+              size="3"
+              class="puntuacion"
+              min="0"
+              max="5"
+              oninput="puntuar('estrellasYoutube', 'puntuacionYoutube')"
+            />/5
+          </center>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
