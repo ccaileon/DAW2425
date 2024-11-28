@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FizzBuzz</title>
+
+    <script>
+      let numero = 1;
+      while (numero <= 100) {
+        if (numero % 3 == 0 && numero % 5 == 0) {
+          console.log("¡FizzBuzz!");
+          numero++;
+        } else if (numero % 3 == 0) {
+          console.log("Fizz");
+          numero++;
+        } else if (numero % 5 == 0) {
+          console.log("Buzz");
+          numero++;
+        } else {
+          console.log(numero);
+          numero++;
+        }
+      }
+
+      /* Con ternarios (más rápido, menos legible):
+let numero = 100;
+for (let i = 1; i <= numero; i++) {
+console.log((i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i)
+}
+Imprime Fizz si i % 3 es false (0) o '' (nada) si es true (no es divisible de 3). Concatena Buzz si i es divisible por 5, y si ninguno es false (divisible, 0) imprime solo el número.
+*/
+    </script>
+  </head>
+  <body>
+    <h1>FizzBuzz</h1>
+    <b>¡Mira la consola! →</b><br />
+    Número divisible entre 3: Fizz<br />
+    Número divisible entre 5: Buzz<br />
+    Número divisible entre ambos: ¡FizzBuzz!
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack de Noelia</title>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+    <!-- Libreria Underscore -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fuentes consultadas: https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click -->
+  </head>
+  <body>
+    <main>
+      <audio id="audio" src="utils/cardSound.mp3"></audio>
+      <h1 id="titulo">Juega al Blackjack</h1>
+
+      <div id="comenzar">
+        <button id="btn-comenzar">Comenzar Partida</button>
+      </div>
+
+      <div id="banca" class="banca">
+        <h1>Cartas de la Banca</h1>
+        <h3 id="puntosBanca">Puntos Banca:</h3>
+        <div id="cartasBanca"></div>
+      </div>
+
+      <div id="jugador" class="jugador">
+        <h1 id="tituloJugador">Cartas de Jugador</h1>
+        <h3 id="puntosJugador">Puntos Jugador:</h3>
+        <div id="botonesJugador" class="botonesJugador">
+          <button id="btn-pedir">Pedir Carta</button>
+          <button id="btn-plantar">Plantarse</button>
+        </div>
+        <div id="cartasJugador"></div>
+      </div>
+
+      <div id="resultado" class="resultado"></div>
+
+      <script src="js\objetos.js"></script>
+      <script src="js\juego.js"></script>
+    </main>
+  </body>
+</html>

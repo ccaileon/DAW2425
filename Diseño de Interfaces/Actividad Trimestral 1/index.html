@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Huellas</title>
+    <link rel="stylesheet" href="css\styles.css" />
+
+    <!-- Fuentes consultadas 
+     https://www.eniun.com/como-crear-menu-horizontal-html-css/ (Menú)
+     https://www.hazunaweb.com/curso-de-html/formularios-campos-texto/ (Textarea)
+     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio (Input Radio)
+     https://www.arsys.es/blog/campos-input-texto-css (Personalización Inputs)
+     https://es.stackoverflow.com/questions/234203/ajustar-ancho-de-un-div-al-100-de-toda-la-pantalla (Ajustar div al ancho completo)
+     https://www.w3schools.com/tags/tag_header.asp (Header)
+     https://www.w3schools.com/tags/tag_footer.asp (Footer)
+     https://developer.mozilla.org/es/docs/Web/CSS/CSS_multicol_layout (Columnas)
+     https://es.stackoverflow.com/questions/5976/div-adaptable-horizontal-de-tres-columnas (Columnas)
+     https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties (Personalización en general)
+     https://webdesign.tutsplus.com/es/a-few-different-css-methods-for-column-ordering--cms-27079t (Posicionar elementos y divs)
+     https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox (Uso de flexbox)
+     -->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logotipo"
+          ><img src="resources\iconos\logotipo-inverso.png" class="logotipo"
+        /></a>
+        <ul>
+          <a href="index.html">Inicio</a>
+          <a href="producto.html">Productos</a>
+          <a href="contacto.html">Contacto</a>
+
+          <a href="#"
+            ><img src="resources\iconos\carrito-mundo-huellas.png"
+          /></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="ancho-completo">
+        <div class="mensajeBienvenida">
+          <h1>Mundo Huellas</h1>
+          <h2>Tu tienda para mascotas</h2>
+          <a href="producto.html"
+            ><button>Consulta nuestros productos</button></a
+          >
+        </div>
+      </div>
+
+      <div class="contenedor-doble">
+        <div>
+          <h1>¿Quiénes Somos?</h1>
+          <p>
+            En Mundo Huellas, somos un equipo apasionado por los animales.
+            <b>Nuestra tienda nació en el año 1995</b> en la Región de Murcia,
+            con el propósito de ofrecer a cada mascota lo mejor en calidad,
+            comodidad y bienestar.<br /><br />
+
+            Creemos que cada mascota es un miembro importante de la familia, y
+            <b
+              >nuestro objetivo es hacer que su vida sea más feliz y
+              saludable</b
+            >. Con años de experiencia en el mundo de las mascotas, nos hemos
+            comprometido a seleccionar cuidadosamente productos que hagan la
+            diferencia en la vida de nuestros compañeros de cuatro patas.
+          </p>
+        </div>
+        <div><img src="resources\perro-productos-tienda-animales.jpg" /></div>
+      </div>
+      <div class="fondo-completo">
+        <div class="nuestros-valores">
+          <h1>Nuestros Valores</h1>
+        </div>
+        <div class="contenedor-triple">
+          <div>
+            <img src="resources\confianza-mundo-huellas.jpg" />
+            <h2>Calidad y Confianza</h2>
+            <p>
+              Elegimos <b>productos de alta calidad</b>, asegurándonos de que
+              cada artículo que ofrecemos cumple con nuestros altos estándares.
+              Queremos ser una tienda en la que puedas confiar plenamente.
+            </p>
+          </div>
+
+          <div>
+            <img src="resources\productos-sostenibles-mundo-huellas.jpg" />
+            <h2>Sostenibilidad</h2>
+            <p>
+              Nos preocupa el impacto que dejamos en el mundo, por eso buscamos
+              trabajar con marcas y productos que se preocupan por el medio
+              ambiente, con <b>materiales sostenibles y procesos éticos</b>.
+            </p>
+          </div>
+          <div>
+            <img src="resources\compromiso-mundo-huellas.jpg" />
+            <h2>Compromiso</h2>
+            <p>
+              Escuchamos a nuestros clientes porque ellos conocen mejor a sus
+              mascotas. Nuestro compromiso es
+              <b>brindar un servicio excepcional</b>, siempre atentos a sus
+              inquietudes y comentarios.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nuestros-productos">
+        <h1>Nuestros Productos</h1>
+        <p>
+          En Mundo Huellas, ofrecemos una amplia gama de productos diseñados
+          para el bienestar y la felicidad de tus mascotas.
+          <b
+            >Desde alimentos nutritivos y equilibrados hasta juguetes que
+            estimulan su mente y accesorios que facilitan su cuidado diario.</b
+          >
+          Trabajamos con marcas de confianza, conocidas por su calidad y
+          compromiso, para asegurar que solo recibas lo mejor para tu mascota.
+        </p>
+
+        <div class="productos">
+          <div>
+            <img
+              src="resources\iconos\alimentacion-mascotas-mundo-huellas.png"
+            />
+            <h2>Alimentación</h2>
+          </div>
+
+          <div>
+            <img src="resources\iconos\higiene-mascota-mundo-huellas.png" />
+            <h2>Higiene</h2>
+          </div>
+
+          <div>
+            <img
+              src="resources\iconos\antiparasitarios-mascotas-mundo-huellas.png"
+            />
+            <h2>Antiparasitarios</h2>
+          </div>
+
+          <div>
+            <img src="resources\iconos\nutraceuticos-mundo-huellas.png" />
+            <h2>Suplementos</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-style">
+        <div>
+          <h1>Mundo Huellas</h1>
+          <h2>Tu tienda para mascotas</h2>
+        </div>
+        <div>
+          <h3>Dirección</h3>
+          <p>C/ Final del Arcoiris • 30710 Narnia</p>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p>968 12 34 56</p>
+        </div>
+
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a Sábados de 10h a 21h</p>
+        </div>
+      </div>
+
+      <center>Copyright © 2024 Mundo Huellas</center>
+    </footer>
+  </body>
+</html>

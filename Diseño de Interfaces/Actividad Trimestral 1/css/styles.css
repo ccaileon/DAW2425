@@ -1,0 +1,376 @@
+body {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+display: flex;
+background-color: #ffffff;
+flex-direction: column; /* El contenido se ordena de forma vertical */
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* Para que cuente todo el ancho */
+height: 100vh; /* Altura de la página */
+width: auto;
+color: #151311; /* Color por defecto del texto */
+margin-left: 100px; /* Margen izquierdo */
+}
+
+h1 { /* Personalización de todos los h1 de la web */
+color: #d85600; /* Color de la letra */
+margin-bottom: 30px;
+margin-top: 30px;
+}
+
+
+.ancho-completo { /* Personalización del div ancho-completo de la página de Inicio */
+display: block;
+width: 100vw; /* Para que la imagen cubra todo el ancho de la pantalla */
+margin: 0;
+margin-left: -110px; /* Ajustar el margen que hemos puesto en el body */
+margin-top: 68px; /* Espacio superior para que no quede detrás del menú */
+padding: 0;
+background-image: url("../resources/beautiful-pet-portrait-dog.jpg");
+background-size: cover; /* Para que la imagen cubra todo el div */
+height: 800px; /* Altura del div */
+border: 1px solid rgba(255, 0, 0, 0); /* Borde de prueba */
+}
+
+.mensajeBienvenida {
+color: white; /* Color del texto */
+margin-top: 350px;
+margin-left: 110px;
+}
+.mensajeBienvenida h1 { /* Personalizar el h1 solo en este div */
+font-size: 80px;
+margin-bottom: 10px;
+
+}
+
+.mensajeBienvenida h2 { /* Personalizar el h2 solo en este div */
+font-size: 40px;
+margin-top: 0;
+margin-bottom: 60px;
+}
+
+button, input[type="submit"] { /* Personalización para los botones de la página */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+background-color: #d85600; /* Color de fondo */
+padding: 15px; /* Espacio interno */
+border-collapse: collapse; /* Eliminar el borde */
+border: none; /* Eliminar el borde */
+cursor: pointer; /* Efecto del ratón al pasar por encima */
+font-weight: bold; /* Fuente en negrita */
+color: #ffffff; /* Color del texto */
+margin-bottom: 30px; /* Margen inferior */
+border-radius: 5px;
+margin-top: auto;
+}
+
+button:hover, input[type="submit"]:hover { /* Personalización de botones al pasar el ratón por encima */
+background-color: #f86f14; /* Color de fondo */
+color: #ffffff; /* Color de texto */
+}
+
+
+select {
+display: flex;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+appearance: none; /* Eliminar el estilo por defecto */
+background-color: rgb(255, 231, 199);
+border: 2px solid #d85600;
+padding-left: 5px;
+padding-right: 5px;
+border-radius: 5px;
+font-size: 16px;
+width: 30px;
+text-align: center;
+margin-top: -20px;
+margin-left: 70px;
+margin-bottom: 10px;
+}
+
+
+.contenedor-doble { /* Contenedor de dos columnas */
+display: flex;
+justify-content: space-between;
+margin-top: 70px;
+margin-bottom: 70px;
+justify-items: center;
+
+}
+.contenedor-doble div { /* Columnas */
+flex: 1;
+padding: 10px;
+max-width: 1000px;
+}
+.contenedor-doble img { /* Ajustar imagen del contenedor doble */
+max-width: 300px;
+padding: 0;
+margin: 0;
+height: auto;
+margin-left: 100px;
+}
+
+.cantidad {
+  display: flex;
+  margin-top: auto;
+}
+
+.contenedor-triple {
+display: flex;
+flex-direction: row; /* Elementos en fila */
+justify-content: space-evenly;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 100px;
+margin-left: 110px !important;
+margin-right: 110px;
+color: white;
+flex-wrap: nowrap; /* Impide que los elementos salten de nueva línea */
+}
+
+.contenedor-productos, .productos {
+display: flex;
+justify-content: left;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 100px;
+margin-left: 110px !important;
+margin-right: 110px;
+color: white;
+flex-wrap: wrap; /* Permite que los elementos salten de linea cuando no quede espacio */
+
+}
+.contenedor-triple div, .contenedor-productos div {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-bottom: 30px;
+margin-right: 80px;
+flex: 1 1 20%; /* Ancho mínimo de los divs */
+box-sizing: border-box;
+
+}
+
+.contenedor-productos div {
+  min-height: 20%;
+ flex: 1 1 20%;
+}
+
+.contenedor-productos {
+color: #151311;
+}
+
+.contenedor-productos h4 {
+  display: flex;
+  margin-top: 5px;
+}
+.titulo-grande {
+margin-bottom: 80px;
+margin-top: 150px;
+}
+.titulo-grande h1{
+font-size: 60px;
+}
+
+.nuestros-valores, .nuestros-productos {
+margin-top: 20px!important;
+padding-top: 50px;
+padding-bottom: 5px;
+margin-right: 110px
+}
+
+.nuestros-valores {
+margin-left: 110px;
+}
+
+.contenedor-productos img {
+width: 200px;
+height: auto;
+}
+.contenedor-triple img {
+width: 300px;
+height: 200px;
+}
+
+.contenedor-triple h2, .contenedor-productos h2 {
+color: #d85600;
+}
+.productos {
+display: flex;
+justify-content: space-around; 
+gap: 50px;
+max-width: 1000px;
+margin-top: 70px;
+color: #151311;
+}
+
+.productos div {
+display: flex;
+flex-direction: column; 
+align-items: center; 
+text-align: center; 
+max-width: 150px; 
+}
+
+.productos img {
+width: 50px; 
+height: auto; 
+margin-bottom: 10px; 
+}
+
+.fondo-completo {
+display: block;
+width: 100vw;
+margin: 0;
+margin-left: 0px;
+margin-top: -10px;
+margin-left: -110px;
+padding: 0;
+background-color: #151311;
+background-size: cover;
+height: 700px;
+
+}
+
+.contacto {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+margin-bottom: 20px;
+justify-items: center;
+margin-right: 50px;
+}
+
+.datos-contacto { /* Posicionar los datos de contacto (Página Contacto) */
+margin-top: 50px;
+}
+
+.datos-contacto h3, .datos-contacto h2 {
+margin-top: -20px;
+}
+
+form { /* Posicionar el formulario y sus elementos */
+display: flex;
+flex-direction: column; /* El contenido crece en columna (es decir, hacia abajo) */
+position: relative;
+margin-left: 600px;
+margin-top: -130px;
+}
+
+form input {
+padding: 10px;
+margin: 5px;
+border: none; /* Eliminar borde de los inputs */
+background-color: rgb(255, 231, 199); /* Fondo de los inputs */
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type="radio"] { /* Personalizar el color del botón radio */
+accent-color: #d85600;
+}
+
+input[type="text"]:focus, /* Personalizar todos estos campos con un efecto de borde sombreado cuando están activos (cuando el usuario clica en ellos) */
+input[type="number"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+border: 1px solid #ff8635;
+box-shadow: 0 0 8px #d85600; /* Efecto sombreado */
+outline: none; /* Eliminar el contorno que viene por defecto */
+}
+
+iframe { /* Posicionar el mapa de Google */
+position:relative; /* Para poder moverlo libremente */
+margin-top: -700px;
+}
+
+textarea { /* Estilo para el textarea de Contacto */
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding: 10px;
+background-color: rgb(255, 231, 199); /* Color de fondo */
+border: none; /* Eliminar el borde */
+}
+
+/* -- Personalización del footer -- */
+
+footer {
+width: 100vw; /* Ancho completo */
+background-color: #151311; /* Color de fondo del footer */
+color: white; /* Color del texto */
+padding: 20px;
+box-sizing: border-box; /* Para incluir el padding dentro del ancho */
+margin-left: -110px;
+margin-top: 100px;
+border-top: 1px solid #ff8635; /* Para dar un efecto tipo neón junto al sombreado */
+box-shadow: 0 0 5px #d85600; /* Efecto sombreado */
+}
+
+.footer-style { /* Posicionar los divs del footer */
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 110px;
+margin-right: 110px;
+height: 200px; /* Altura */
+}
+
+footer h2 { /* Posicionar los h2 del footer */
+margin-top: -30px; 
+padding: 0px;
+}
+footer h3 {
+color: #d85600;
+}
+
+/*-- Personalización header --*/
+
+header {
+position: fixed; /* Para que el menu se vea en todo momento, importante al tener carrito */
+width: 100vw; /* Ancho completo */
+height: 90px; /* Altura del menú */
+color: #d85600; /* Color texto */
+border-bottom: 1px solid #ff8635; /* Para dar un efecto tipo neón junto al sombreado */
+box-shadow: 0 0 5px #d85600; /* Efecto sombreado */
+padding: 0px;
+margin-left: -100px; /* Para que cubra todo el ancho */
+background-color: #151311; /* Color de fondo */
+box-sizing: border-box; /* Para que tenga en cuenta los bordes */
+z-index: 100; /* Ajustamos el z-index para que el menú siempre se vea por encima */
+}
+
+header nav { /* Posicionar los enlaces a las páginas alineados horizontalmente */
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+margin-right: 50px;
+}
+header ul { /* Posición de los enlaces a las páginas en el menú */
+margin-top: 0;
+}
+
+header img { /* Imagen del carrito */
+height: 25px;
+margin-top: -5px;
+}
+
+.logotipo { /* Imagen del logotipo */
+height: 70px;
+width: auto;
+margin-bottom: 10px;
+margin-top: 0px;
+margin-left: 20px;
+}
+
+ul { /* Enlaces a las diferentes páginas */
+display: flex;
+gap: 15px; /* Añadir espacio entre las páginas */
+}
+
+ul a {
+text-decoration: none; /* Eliminar el efecto visual de enlace */
+color: white; /* Color del texto */
+font-weight: bold; /* Negrita */
+margin-top: 20px;
+}
+ul a:hover {
+color: #ff8400; /* Color al pasar el ratónn por encima */
+}

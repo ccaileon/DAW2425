@@ -1,0 +1,39 @@
+body {
+background-image: url('../utils/Fondo.avif');
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: white;
+text-shadow: 5px 5px 5px black;
+text-align: center;
+align-content: center;
+justify-content: center;
+}
+
+.jugador, .banca, .btn-JugarNueva {
+  display: none;
+}
+
+
+img {
+  height: 150px;
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button {
+background-color: seagreen;
+border-radius: 5px;
+padding: 10px;
+border: 5px;
+text-align: center;
+color: rgb(0, 0, 0);
+cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(84, 175, 124);
+}
+
+.resultado {
+  font-size: 30px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero Ajedrez</title>
+  <script>
+document.addEventListener('DOMContentLoaded', function() { 
+let linea = '';
+let tablero = document.getElementById('tablero');
+
+for (let index = 0; index < 8; index++) {
+  for (let j = 0; j < 8; j++) {
+    if ((index+j) % 2 === 0) {
+      linea += '#';
+    } else {
+      linea += '_';
+    }
+    
+  }
+  linea += '<br>';
+}
+
+tablero.innerHTML = linea;
+
+});
+  </script>
+</head>
+<body>
+  <div id="tablero"></div>
+</body>
+</html>
