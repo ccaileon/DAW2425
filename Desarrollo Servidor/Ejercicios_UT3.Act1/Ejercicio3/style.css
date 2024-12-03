@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  margin: 0;
+  margin-top: 10px;
+  display: flex;
+  background-color: blueviolet;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.conversor {
+padding: 50px;
+background-color: aliceblue;
+color: blueviolet;
+max-height: 300px;
+border: 10px dotted blueviolet;
+}
+
+input[type='submit']{
+  background-color: blueviolet;
+  border: none;
+  color: aliceblue;
+  display: flex;
+justify-self: center;
+margin-top: 20px;
+padding: 10px;
+border: 3px dotted white;
+cursor: pointer;
+}
