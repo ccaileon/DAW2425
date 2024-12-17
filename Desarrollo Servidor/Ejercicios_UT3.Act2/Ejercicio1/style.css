@@ -1,0 +1,54 @@
+body {
+background-image: url('https://img.freepik.com/premium-vector/number-seamless-pattern-abstract-math-background-school-univerity_87543-6510.jpg');
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin: 0;
+height: 100vh;
+
+}
+
+.contenedor {
+  height: 100%;
+  display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(245, 247, 198);
+  padding: 30px;
+  border: 5px solid #233d77;
+  border-radius: 30px;
+align-items: center;
+}
+
+h1, h2, h3 {
+  color: #233d77;
+}
+
+input[type='submit'] {
+  background-color: #233d77;
+  color: rgb(245, 247, 198);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #162c5b;
+}
+
+input[type='number'] {
+  border: 2px solid #233d77;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  font-size: 28px;
+ text-align: center;
+ color: black;
+}
+
+
+
