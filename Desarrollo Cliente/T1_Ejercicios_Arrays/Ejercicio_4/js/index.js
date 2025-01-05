@@ -40,16 +40,20 @@ baraja = _.shuffle(baraja);
 
 console.log(baraja);
 
-setInterval(sacarBaraja(baraja), 1000);
+let intervalo = setInterval(() => {
+  sacarBaraja(baraja);
+}, 5000);
 
 function sacarBaraja(baraja) {
-  for (let i = 0; i < baraja.length; i++) {
-    console.log(baraja[i]);
-    console.log("Palo: " + baraja[i].slice(-1));
-    if (baraja[i].slice(0, -1) < 11) {
-      console.log("Valor: " + baraja[i].slice(0, -1));
+  if (baraja.length > 0) {
+    let carta = baraja.shift();
+    console.log(carta);
+    console.log("Palo: " + carta.slice(-1));
+
+    if (carta.slice(0, -1) < 11) {
+      console.log("Valor: " + carta.slice(0, -1));
     } else {
-      switch (baraja[i].slice(0, -1)) {
+      switch (carta.slice(0, -1)) {
         case "J":
           console.log("Valor: " + 11);
           break;
@@ -61,5 +65,8 @@ function sacarBaraja(baraja) {
           break;
       }
     }
+  } else {
+    clearInterval(intervalo); // Detener el intervalo si ya no hay cartas
+    console.log("Se han sacado todas las cartas.");
   }
 }
