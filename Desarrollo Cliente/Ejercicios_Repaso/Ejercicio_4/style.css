@@ -1,0 +1,51 @@
+body {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+justify-content: center;
+margin-top: 1%;
+}
+
+.col-md-12 {
+  display: flex;
+  flex-direction: column;  /* Asegura que los elementos se apilen de forma vertical */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center;     /* Centra los elementos horizontalmente */
+         /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+ol {
+  margin-top: 5%;
+  font-size: larger;
+  margin-bottom: 5%;
+}
+
+.botones {
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+input[type='text'], input[type='number']{
+  padding: 1%;
+  height: 10%;
+  width: 20%;
+}
+
+input[type='button'] {
+  border: none;
+  color: white;
+  background-color: royalblue;
+  margin-left: 1%;
+  width: 8%;  /* Ajustar el tamaño */
+  padding: 5px;  /* Agregar relleno si es necesario */
+  border-radius: 12px;  /* Usar valor fijo */
+}
+
+input[type='button']:hover {
+  background-color: rgb(38, 70, 166);
+}
