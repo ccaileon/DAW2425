@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $_SESSION['nombre'] = $_POST['nombre'];
 }
 
@@ -18,13 +18,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
-  
 
-    <form action="nombre.php" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <button type="submit">Guardar</button>
-    </form>
+
+  <form action="nombre.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <button type="submit">Guardar</button>
+  </form>
   <a href="formulario.php">Volver a la página principal</a>
 
 

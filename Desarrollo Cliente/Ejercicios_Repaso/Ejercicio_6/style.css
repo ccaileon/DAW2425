@@ -1,0 +1,57 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;   /* Coloca los elementos en una columna */
+  justify-content: space-between;   /* Espacio entre los elementos */
+  background-color: rgb(221, 228, 235);
+}
+
+.usuarios {
+  display: flex;
+  flex-direction: row;  /* Alinea las tarjetas en fila */
+  flex-wrap: wrap;       /* Permite que las tarjetas se ajusten al tamaño de la pantalla */
+  justify-content: center;  /* Centra las tarjetas */
+ width: 70%;             /* El contenedor tiene un 70% del ancho de la página */
+  margin: 0 auto;
+  align-items: center;
+}
+
+.card {
+  margin: 10px;  /* Espaciado entre las cards */
+  padding: 1%;
+  height: 550px;
+}
+
+.card:hover {
+  background-color: rgb(241, 245, 249);
+}
+
+input[type="button"] {
+  display: block;
+  background-color: royalblue;
+  color: white;
+  width: 10%;
+  margin: auto;
+  padding: 1%;
+  border: none;
+  margin-top: 3%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  
+ 
+}
+input[type="button"]:hover {
+  background-color: rgb(51, 83, 178);
+}
+
+h2 {
+  align-self: center;
+  margin-top: 1%;
+  color: royalblue;
+}
+
+.bloque-btn {
+  flex-direction: column;
+  display: flex;
+margin-bottom: 3%;
+}
