@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       imagen2,
       imagen3,
       nombre,
+      categoria,
       descripcion,
       precio,
       id
@@ -124,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <div class="card-body d-flex flex-column custom-card">
         <h5 class="card-title">${nombre}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">${categoria}</h6>
         <p class="card-text">${descripcion}</p>
         <div class="d-flex justify-content-between align-items-center mt-auto">
           <h5 class="text-danger fw-bold mb-0">${precio}€</h5>
@@ -160,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
           producto.images[1],
           producto.images[2],
           producto.title,
+          producto.category,
           producto.description,
           producto.price,
           producto.id
