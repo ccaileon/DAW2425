@@ -1,0 +1,249 @@
+/* MENU */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.custom-navbar{
+  background-color: #151311!important;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+    border-bottom: 1px solid #ff8635; 
+box-shadow: 0 0 10px #d85600; 
+z-index: 10;
+position: sticky;
+top: 0;  
+}
+
+
+.container-fluid {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.navbar-brand {
+  padding-left: 2%;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #ff8635;
+}
+
+nav.navbar .nav-link.active { 
+color: #ff8635!important;
+
+}
+
+.btn.btn-outline-success {
+  border: 1px solid #ff8635;
+  color: #ff8635;
+  box-sizing: border-box; 
+}
+
+.btn.btn-outline-success:hover {
+  color: white;
+  background-color: #d85600;
+  border: 1px solid #d85600; 
+  box-shadow: 0 0 0 2px #d85600;  
+}
+
+.d-flex {
+  padding-right: 2%;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #151311;
+  padding-top:5%;
+  padding-bottom:3%;
+border-top: 1px solid #ff8635; 
+box-shadow: 0 0 10px #d85600; 
+z-index: 10;
+}
+
+.footer h3 {
+  color: #d85600;
+}
+.footer p {
+  color: white;
+  font-weight: 500;
+}
+.footer .text-center {
+margin-top: 3%;
+color: blanchedalmond;
+font-weight: 100;
+}
+
+
+/* INICIO */
+
+/* CABECERA INICIO*/
+.cabecera {
+  display: block;
+  position: relative;
+  background-image: url('../resources/beautiful-pet-portrait-dog.jpg')!important;
+  background-size: cover;
+ background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  height: 100vh;
+  transition: background-position 0.3 ease-out;
+}
+
+.cabecera-texto {
+  position: absolute;
+  color: white!important;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%); 
+  z-index: 1;
+  font-size: 6rem;
+}
+
+.cabecera-texto h1 {
+  font-size: 5rem;
+  color: white!important;
+}
+
+.cabecera-texto .btn-primary {
+  background-color: #d85600;
+  border: none;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.cabecera-texto .btn-primary:hover {
+background-color: #ff8635;
+}
+
+/* CONTENIDO INICIO */
+h1 {
+    color: #d85600;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+
+h2 {
+    color: #d85600;
+  font-weight: bold;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+
+.index-1 {
+  margin-top: 5%;
+  margin-bottom: 5%
+}
+
+.index-1 h1 {
+  margin-top: -5%;
+}
+
+.index-2 {
+  background-color: #151311;
+  padding-top: 5%;
+padding-bottom: 5%;
+
+}
+
+.index-2 h2{
+font-weight: 500!important;
+margin-top: 3%;
+}
+
+.index-2 p{
+color: white!important;
+}
+
+.index-2 h1 {
+color: white!important;
+}
+
+.index-3 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.index-3 h1 {
+  margin-bottom: 3%;
+}
+
+.index-3 h2 {
+  margin-top: 8%;
+}
+
+.index-3 p {
+  margin-bottom: 2%;
+}
+
+
+
+
+/* PRODUCTOS */
+
+.custom-col-productos {
+  margin-bottom: 10%;
+}
+
+.productos-1 h1 {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.productos-1 h4 {
+  margin-bottom: 5%;
+}
+
+.custom-carousel {
+height: 60vh;
+}
+.custom-carousel img{
+  display: block;
+  position: relative;
+   height: auto;
+}
+.btn-primary {
+  background-color: #d85600;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff8635;
+}
+
+.card {
+  border: none;
+}
+
+.container .col {
+margin-top: 5%;
+}
+
+/* CONTACTO */
+
+.custom-contacto {
+  margin-top: 5%;
+}
+
+/* FORMULARIO */
+
+input[type='text'], input[type='email'], input[type='number'] {
+  margin-top: 1%;
+}
+
+.row form {
+  margin-bottom: 10%;
+}
+
+.row form .btn {
+width: 20%;
+margin-top: 3%;
+}
+
