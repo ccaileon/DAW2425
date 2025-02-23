@@ -45,40 +45,43 @@
             <li class="nav-item">
               <a class="nav-link" href="add.php">Vender Propiedad</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../logout.php">Cerrar Sesión</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-</header>
+  </header>
 
   <div class="container">
     <div>
       <h2>Vender Propiedad</h2>
       <form action="add2.php" method="POST" enctype="multipart/form-data">
-          <select name="tipo-propiedad-add">
-            <option value="default" selected disabled>- Tipo de propiedad -</option>
-            <option value="piso">Piso</option>
-            <option value="local">Local</option>
-          </select>
+        <select name="tipo-propiedad-add">
+          <option value="default" selected disabled>- Tipo de propiedad -</option>
+          <option value="piso">Piso</option>
+          <option value="local">Local</option>
+        </select>
         <input type="text" name="calle-add" placeholder="Calle" required><input type="number" name="numero-add"
           placeholder="Nº" required>
         <input type="number" name="cp-add" placeholder="C.P." required>
         <input type="number" name="piso-add" placeholder="Piso">
         <input type="number" name="puerta-add" placeholder="Puerta">
         <input type="number" name="metros-add" placeholder="m2">
-       <select name="ciudad-add">
-            <option value="default" selected disabled>- Ciudad -</option>
-            <option value="malaga">Málaga</option>
-            <option value="estepona">Estepona</option>
-            <option value="marbella">Marbella</option>
-            <option value="torremolinos">Torremolinos</option>
-            <option value="fuengirola">Fuengirola</option>
-            <option value="benalmadena">Benalmádena</option>
-            <option value="ronda">Ronda</option>
-            <option value="coín">Coín</option>
-            <option value="antequera">Antequera</option>
-            <option value="alhaurin_el_grande">Alhaurín el Grande</option>
-          </select>
+        <select name="ciudad-add">
+          <option value="default" selected disabled>- Ciudad -</option>
+          <option value="malaga">Málaga</option>
+          <option value="estepona">Estepona</option>
+          <option value="marbella">Marbella</option>
+          <option value="torremolinos">Torremolinos</option>
+          <option value="fuengirola">Fuengirola</option>
+          <option value="benalmadena">Benalmádena</option>
+          <option value="ronda">Ronda</option>
+          <option value="coín">Coín</option>
+          <option value="antequera">Antequera</option>
+          <option value="alhaurin_el_grande">Alhaurín el Grande</option>
+        </select>
         <input type="number" name="precio-add" placeholder="Precio €">
 
         <label for="file">Subir imagen</label>
@@ -86,11 +89,11 @@
 
         <input type="submit" value="Poner en Venta">
       </form>
-    
+
     </div>
-<div class='row'>
-    <a href='index-seller.php'>Volver a Inicio</a>
-  </div>
+    <div class='row'>
+      <a href='index-seller.php'>Volver a Inicio</a>
+    </div>
   </div>
 </body>
 

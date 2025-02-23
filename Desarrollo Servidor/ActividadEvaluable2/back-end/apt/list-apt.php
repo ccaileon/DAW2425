@@ -17,7 +17,7 @@ session_start();
   <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria Costa del Sol</a>
+        <a class="navbar-brand" href="../index-adm.php">Inmobiliaria Costa del Sol</a>
 
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,7 +46,7 @@ session_start();
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
 
-     
+
           <ul class="navbar-nav">
 
             <li class="nav-item dropdown">
@@ -66,7 +66,7 @@ session_start();
               </ul>
             </li>
 
-         
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPropiedades" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,6 +81,9 @@ session_start();
                 </li>
                 <li><a class="dropdown-item" href="list-apt.php">Listar Propiedades</a></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
             </li>
           </ul>
         </div>
@@ -101,6 +104,24 @@ session_start();
     if ($database) {
 
       $listPisos = mysqli_query($database, "SELECT * FROM pisos");
+
+      $ciudades_formateadas = [
+        "malaga" => "Málaga",
+        "estepona" => "Estepona",
+        "marbella" => "Marbella",
+        "torremolinos" => "Torremolinos",
+        "fuengirola" => "Fuengirola",
+        "benalmadena" => "Benalmádena",
+        "ronda" => "Ronda",
+        "coín" => "Coín",
+        "antequera" => "Antequera",
+        "alhaurin_el_gra" => "Alhaurín el Grande"
+      ];
+
+      function formatearCiudad($ciudad, $ciudades_formateadas)
+      {
+        return $ciudades_formateadas[strtolower($ciudad)] ?? $ciudad;
+      }
 
       if ($listPisos) {
 
@@ -136,7 +157,7 @@ session_start();
             echo "<td>" . $fila["puerta"] . "</td>";
             echo "<td>" . $fila["cp"] . "</td>";
             echo "<td>" . $fila["metros"] . "</td>";
-            echo "<td>" . $fila["ciudad"] . "</td>";
+            echo "<td>" . formatearCiudad($fila["ciudad"], $ciudades_formateadas) . "</td>";
             echo "<td>" . $fila["precio"] . "</td>";
             echo "</tr>";
           }
@@ -185,7 +206,7 @@ session_start();
             echo "<td>" . $fila["puerta"] . "</td>";
             echo "<td>" . $fila["cp"] . "</td>";
             echo "<td>" . $fila["metros"] . "</td>";
-            echo "<td>" . $fila["ciudad"] . "</td>";
+            echo "<td>" . formatearCiudad($fila["ciudad"], $ciudades_formateadas) . "</td>";
             echo "<td>" . $fila["precio"] . "</td>";
             echo "</tr>";
           }

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="../css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-        <header>
+  <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="index.php">Inmobiliaria Costa del Sol</a>
@@ -51,7 +53,7 @@
         </div>
       </div>
     </nav>
-</header>
+  </header>
 
   <div class="container">
     <h1>Formulario de registro</h1>
@@ -59,14 +61,15 @@
       <label for="tipo-usuario">Usted es: </label>
       <input type="radio" id="comprador" value="comprador" name="tipo-usuario" required>
       <label for="comprador">Comprador</label>
-           <input type="radio" id="vendedor" value="vendedor" name="tipo-usuario">
-           <label for="vendedor">Vendedor</label>
+      <input type="radio" id="vendedor" value="vendedor" name="tipo-usuario">
+      <label for="vendedor">Vendedor</label>
       <input type="text" name="nombre" placeholder="Nombre" required>
-       <input type="text" name="apellidos" placeholder="Apellidos" required>
-        <input type="email" name="email" placeholder="Correo Electrónico" required>
-        <input type="password" name="pass" placeholder="Clave de Acceso" required>
-<input type="submit" value="Registrarme">
+      <input type="text" name="apellidos" placeholder="Apellidos" required>
+      <input type="email" name="email" placeholder="Correo Electrónico" required>
+      <input type="password" name="pass" placeholder="Clave de Acceso" required>
+      <input type="submit" value="Registrarme">
     </form>
   </div>
 </body>
+
 </html>

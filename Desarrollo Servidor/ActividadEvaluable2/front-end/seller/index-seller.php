@@ -51,6 +51,9 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" href="add.php">Vender Propiedad</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../logout.php">Cerrar Sesión</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,6 +72,25 @@ session_start();
     $consultaPiso = mysqli_query($database, "SELECT * FROM pisos WHERE usuario_id = '$idUsuario'") or die("Fallo en la consulta");
 
     if ($consultaPiso) {
+
+      $ciudades_formateadas = [
+        "malaga" => "Málaga",
+        "estepona" => "Estepona",
+        "marbella" => "Marbella",
+        "torremolinos" => "Torremolinos",
+        "fuengirola" => "Fuengirola",
+        "benalmadena" => "Benalmádena",
+        "ronda" => "Ronda",
+        "coín" => "Coín",
+        "antequera" => "Antequera",
+        "alhaurin_el_gra" => "Alhaurín el Grande"
+      ];
+
+      function formatearCiudad($ciudad, $ciudades_formateadas)
+      {
+        return $ciudades_formateadas[strtolower($ciudad)] ?? $ciudad;
+      }
+
       $nfilas = mysqli_num_rows($consultaPiso);
 
       if ($nfilas > 0) {
@@ -78,16 +100,16 @@ session_start();
         for ($i = 0; $i < $nfilas; $i++) {
           $fila = mysqli_fetch_assoc($consultaPiso);
           echo '<div class="card" style="width: 18rem;">';
-          echo ' <img class="card-img-top" src="seller/' . $fila['imagen_url'] . '" alt="Card image cap">';
+          echo ' <img class="card-img-top" src="' . $fila['imagen_url'] . '" alt="Card image cap">';
           echo '<div class="card-body">';
-          echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . $fila['ciudad'] . '</h5>';
+          echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . '</h5>';
           echo "<h6 class='card-text'>Ref.: {$fila['Codigo_piso']}.</h6>";
-          echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de {$fila['ciudad']}. <br>
-      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, {$fila['ciudad']}<br>
-      Precio: {$fila['precio']}€</p></div>";
+          echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de " . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . ". <br>
+      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, " . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . "<br>
+      Precio: {$fila['precio']}€</p>";
           echo '<a href="delete-seller.php?id=' . $fila['Codigo_piso'] . '" class="btn btn-danger">Eliminar Propiedad</a>';
+          echo '</div></div>';
 
-          echo '</div>';
         }
 
       }
@@ -107,14 +129,16 @@ session_start();
         for ($i = 0; $i < $nfilas; $i++) {
           $fila = mysqli_fetch_assoc($consultaLocal);
           echo '<div class="card" style="width: 18rem;">';
-          echo ' <img class="card-img-top" src="seller/' . $fila['imagen_url'] . '" alt="Card image cap">';
+          echo ' <img class="card-img-top" src="' . $fila['imagen_url'] . '" alt="Card image cap">';
           echo '<div class="card-body">';
-          echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . $fila['ciudad'] . '</h5>';
-          echo "<h6 class='card-text'>Ref.: {$fila['Codigo_locales']}.</h6>";
-          echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de {$fila['ciudad']}. <br>
-      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, {$fila['ciudad']}<br>
-      Precio: {$fila['precio']}€. Ref: {$fila['Codigo_local']}.</p></div>";
-          echo '<a href="delete-seller.php?id=' . $fila['Codigo_piso'] . '" class="btn btn-danger">Eliminar Propiedad</a>';
+          echo '<h5 class="card-title">Local de ' . $fila['metros'] . ' m2 en ' . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . '</h5>';
+          echo "<h6 class='card-text'>Ref.: {$fila['Codigo_local']}.</h6>";
+          echo "<p class='card-text'>Local de {$fila['metros']} metros cuadrados en la ciudad de " . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . ". <br>
+      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, " . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . "<br>
+      Precio: {$fila['precio']}€</p>";
+          echo '<a href="delete-seller.php?id=' . $fila['Codigo_local'] . '" class="btn btn-danger">Eliminar Propiedad</a>';
+          echo '</div></div>';
+
 
 
         }

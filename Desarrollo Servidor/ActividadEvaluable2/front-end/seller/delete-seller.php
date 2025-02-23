@@ -19,11 +19,11 @@ if (isset($_GET['id']) && isset($_SESSION['usuario_id'])) {
     if ($resultadoPiso && mysqli_num_rows($resultadoPiso) > 0) {
 
       $filaPiso = mysqli_fetch_assoc($resultadoPiso);
-      $imagenPiso = $filaPiso['imagen_url']; 
+      $imagenPiso = $filaPiso['imagen_url'];
 
 
-      if (file_exists("seller/" . $imagenPiso)) {
-        unlink("seller/" . $imagenPiso); 
+      if (file_exists($imagenPiso)) {
+        unlink($imagenPiso);
       }
 
       $borrarPiso = "DELETE FROM pisos WHERE Codigo_piso = '$idPropiedad' AND usuario_id = '$idUsuario'";
@@ -44,7 +44,7 @@ if (isset($_GET['id']) && isset($_SESSION['usuario_id'])) {
 
       echo "No tienes permiso para eliminar esta propiedad o no existe.";
     }
-  
+
   }
 
   echo "<div class='row'>

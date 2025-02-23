@@ -47,9 +47,9 @@ session_start();
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
 
-   
+
           <ul class="navbar-nav">
-      
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,7 +67,7 @@ session_start();
               </ul>
             </li>
 
-   
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPropiedades" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,6 +82,9 @@ session_start();
                 </li>
                 <li><a class="dropdown-item" href="list-apt.php">Listar Propiedades</a></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
             </li>
           </ul>
         </div>
@@ -122,9 +125,9 @@ session_start();
 
       if (isset($imagen) && $imagen["error"] == 0) {
         $nombreFichero = $imagen["name"];
-        $rutaImagen = "../../front-end/seller/uploads/" . basename($nombreFichero);
+        $rutaImagen = "uploads/" . basename($nombreFichero);
 
-        if (move_uploaded_file($imagen["tmp_name"], $rutaImagen)) {
+        if (move_uploaded_file($imagen["tmp_name"], "../../front-end/seller/" . $rutaImagen)) {
           echo "Imagen subida con éxito. ";
         } else {
           echo "Error al subir la imagen. ";

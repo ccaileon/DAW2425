@@ -45,6 +45,9 @@
             <li class="nav-item">
               <a class="nav-link" href="add.php">Vender Propiedad</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../logout.php">Cerrar Sesión</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -111,29 +114,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       if ($addLocal) {
         echo "Propiedad agregada correctamente.";
-        $consulta = "SELECT tipo_usuario FROM usuarios WHERE id = '$usuario_id'";
-        $resultado = mysqli_query($database, $consulta);
-        if ($mysqli_num_rows($resultado) > 0) {
-          $datosUsuario = mysqli_fetch_assoc($resultado);
-          $tipoUsuario = $datosUsuario['tipo_usuario'];
-          if ($tipoUsuario == "vendedor") {
-            echo "<div class='row'>
-    <a href='seller/index-seller.php'>Volver a Inicio</a>
-  </div>";
-          } elseif ($tipoUsuario == "comprador") {
-            echo "<div class='row'>
-    <a href='../buyer/index-buyer.php'>Volver a Inicio</a>
-  </div>";
-          }
-        }
       } else {
         echo "Error al insertar la propiedad: " . mysqli_error($database);
       }
     }
+  } else {
+    echo "Error al insertar la propiedad: " . mysqli_error($database);
   }
-
-  mysqli_close($database);
 }
+
+echo ` <div class="row">
+    <a href='index-seller.php'>Volver</a>
+  </div>`;
+mysqli_close($database);
+
 
 
 

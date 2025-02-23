@@ -121,7 +121,7 @@ Precio_final FLOAT NOT NULL
     echo "Error al crear la tabla: " . mysqli_error($conexion);
   }
 
-  echo "<div class='row'><a href=#>Ir a Inicio</a></div>";
+  echo "<div class='row'><a href=../front-end/index.php>Ir a Inicio</a></div>";
   mysqli_close($conexion);
   ?>
 </body>

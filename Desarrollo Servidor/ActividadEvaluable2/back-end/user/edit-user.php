@@ -17,7 +17,7 @@ session_start();
   <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria Costa del Sol</a>
+        <a class="navbar-brand" href="../index-adm.php">Inmobiliaria Costa del Sol</a>
 
 
 
@@ -82,6 +82,10 @@ session_start();
                 </li>
                 <li><a class="dropdown-item" href="../apt/list-apt.php">Listar Propiedades</a></li>
               </ul>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
             </li>
           </ul>
         </div>

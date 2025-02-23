@@ -17,11 +17,11 @@ session_start();
   <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria Costa del Sol</a>
+        <a class="navbar-brand" href="../index-adm.php">Inmobiliaria Costa del Sol</a>
 
-      
+
         <div class="collapse navbar-collapse" id="navbarNav">
-       
+
           <form class="d-flex me-auto" action="../apt/search-apt2.php" method="POST">
             <select class="form-select me-2" name="tipo-propiedad" required>
               <option value="" selected disabled>- Tipo de propiedad -</option>
@@ -47,7 +47,7 @@ session_start();
           </form>
 
           <ul class="navbar-nav">
-     
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@ session_start();
               </ul>
             </li>
 
-        
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPropiedades" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,6 +81,10 @@ session_start();
                 <li><a class="dropdown-item" href="../apt/list-apt.php">Listar Propiedades</a></li>
               </ul>
             </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -91,7 +95,7 @@ session_start();
 
   <?php
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $idUser = $_POST["id-edit-user"];
+    $idUser = $_POST["id-search-user"];
 
     $server = "127.0.0.1";
     $user = "root";
@@ -101,7 +105,7 @@ session_start();
 
     if ($database) {
 
-      $searchUser = mysqli_query($database,"SELECT * FROM usuario WHERE usuario_id = '$idUser'");
+      $searchUser = mysqli_query($database, "SELECT * FROM usuario WHERE usuario_id = '$idUser'");
 
       if ($searchUser) {
 
@@ -112,11 +116,11 @@ session_start();
             $fila = mysqli_fetch_assoc($searchUser);
             echo '<div class="card" style="width: 18rem;">';
             echo '<div class="card-body">';
-            echo '<h5 class="card-title">Usuario Id' . $fila['usuario_id'].'</h5>';
+            echo '<h5 class="card-title">Usuario Id' . $fila['usuario_id'] . '</h5>';
             echo "<p class='card-text'>Nombre: {$fila['nombre']}<br>
       Apellidos: {$fila['apellidos']}<br>
       Email: {$fila['correo']}<br>Tipo de Usuario: {$fila['tipo_usuario']}<br>";
-            echo '</div>';
+            echo '</div></div>';
           }
 
         } else {

@@ -17,7 +17,7 @@ session_start();
   <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria Costa del Sol</a>
+        <a class="navbar-brand" href="../index-adm.php">Inmobiliaria Costa del Sol</a>
 
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,9 +46,9 @@ session_start();
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
 
-     
+
           <ul class="navbar-nav">
-      
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,6 +80,10 @@ session_start();
                 </li>
                 <li><a class="dropdown-item" href="../apt/list-apt.php">Listar Propiedades</a></li>
               </ul>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
             </li>
           </ul>
         </div>

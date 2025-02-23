@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
+  <link href="../css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,29 +26,29 @@
 
     if ($database) {
 
-$consultaEmail = mysqli_query($database, "SELECT * FROM usuario WHERE correo = '$email'") or die("Fallo en la consulta");
+      $consultaEmail = mysqli_query($database, "SELECT * FROM usuario WHERE correo = '$email'") or die("Fallo en la consulta");
 
-if($consultaEmail) {
-      $nfilas = mysqli_num_rows($consultaEmail);
-if ($nfilas > 0) {
-  echo "<p>Ya existe una cuenta asociada a este correo electrónico</p>";
-  echo "<div class='row'>
+      if ($consultaEmail) {
+        $nfilas = mysqli_num_rows($consultaEmail);
+        if ($nfilas > 0) {
+          echo "<p>Ya existe una cuenta asociada a este correo electrónico</p>";
+          echo "<div class='row'>
     <a href='login.php'>Iniciar Sesión</a>
   </div>";
-  echo "<div class='row'>
+          echo "<div class='row'>
     <a href='register.php'>Registrar otra cuenta</a>
   </div>";
-} else {
-      $añadirUsuario = mysqli_query($database, "INSERT INTO usuario (nombre, apellidos, correo, clave, tipo_usuario) VALUES ('$nombre', '$apellidos', '$email', '$clave', '$tipoUsuario')");
-      echo "Registro completado. Ya puede iniciar sesión con su cuenta.";
-    }
-    
-    mysqli_close($database);
-  }
+        } else {
+          $añadirUsuario = mysqli_query($database, "INSERT INTO usuario (nombre, apellidos, correo, clave, tipo_usuario) VALUES ('$nombre', '$apellidos', '$email', '$clave', '$tipoUsuario')");
+          echo "Registro completado. Ya puede iniciar sesión con su cuenta.";
+        }
+
+        mysqli_close($database);
+      }
     }
   }
   ?>
-
+  <div class='row'><a href='login.php'>Iniciar Sesión</a></div>
 
 </body>
 

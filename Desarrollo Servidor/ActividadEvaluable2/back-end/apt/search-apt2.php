@@ -17,7 +17,7 @@ session_start();
   <header>
     <nav class="navbar navbar-light navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria Costa del Sol</a>
+        <a class="navbar-brand" href="../index-adm.php">Inmobiliaria Costa del Sol</a>
 
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,9 +46,9 @@ session_start();
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
 
-        
+
           <ul class="navbar-nav">
-         
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,7 +66,7 @@ session_start();
               </ul>
             </li>
 
-         
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPropiedades" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,6 +81,9 @@ session_start();
                 </li>
                 <li><a class="dropdown-item" href="list-apt.php">Listar Propiedades</a></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../front-end/logout.php">Cerrar Sesión</a>
             </li>
           </ul>
         </div>
@@ -101,6 +104,24 @@ session_start();
 
     if ($database) {
 
+      $ciudades_formateadas = [
+        "malaga" => "Málaga",
+        "estepona" => "Estepona",
+        "marbella" => "Marbella",
+        "torremolinos" => "Torremolinos",
+        "fuengirola" => "Fuengirola",
+        "benalmadena" => "Benalmádena",
+        "ronda" => "Ronda",
+        "coín" => "Coín",
+        "antequera" => "Antequera",
+        "alhaurin_el_gra" => "Alhaurín el Grande"
+      ];
+
+      function formatearCiudad($ciudad, $ciudades_formateadas)
+      {
+        return $ciudades_formateadas[strtolower($ciudad)] ?? $ciudad;
+      }
+
       if ($tipoPropiedad == "piso") {
         $consulta = mysqli_query($database, "SELECT * FROM pisos WHERE ciudad = '$ciudad'") or die("Fallo en la consulta");
 
@@ -114,12 +135,15 @@ session_start();
               echo '<div class="card" style="width: 18rem;">';
               echo ' <img class="card-img-top" src="../../front-end/seller/' . $fila['imagen_url'] . '" alt="Card image cap">';
               echo '<div class="card-body">';
-              echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . $fila['ciudad'] . '</h5>';
+              echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . '</h5>';
               echo "<h6 class='card-text'>Ref.: {$fila['Codigo_piso']}.</h6>";
-              echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de {$fila['ciudad']}. <br>
-      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, {$fila['ciudad']}<br>
+              echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de " .
+                formatearCiudad($fila['ciudad'], $ciudades_formateadas) . ". <br>
+      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, " .
+                formatearCiudad($fila['ciudad'], $ciudades_formateadas) . "<br>
       Precio: {$fila['precio']} €.</p>";
-              echo '</div>';
+              echo '</div></div>';
+
 
             }
 
@@ -133,19 +157,21 @@ session_start();
         if ($consulta) {
           $nfilas = mysqli_num_rows($consulta);
 
-
           if ($nfilas > 0) {
             for ($i = 0; $i < $nfilas; $i++) {
               $fila = mysqli_fetch_assoc($consulta);
               echo '<div class="card" style="width: 18rem;">';
               echo ' <img class="card-img-top" src="../../front-end/seller/' . $fila['imagen_url'] . '" alt="Card image cap">';
               echo '<div class="card-body">';
-              echo '<h5 class="card-title">Piso de ' . $fila['metros'] . ' m2 en ' . $fila['ciudad'] . '</h5>';
+              echo '<h5 class="card-title">Local de ' . $fila['metros'] . ' m2 en ' . formatearCiudad($fila['ciudad'], $ciudades_formateadas) . '</h5>';
               echo "<h6 class='card-text'>Ref.: {$fila['Codigo_local']}.</h6>";
-              echo "<p class='card-text'>Piso de {$fila['metros']} metros cuadrados en la ciudad de {$fila['ciudad']}. <br>
-      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, {$fila['ciudad']}<br>
+              echo "<p class='card-text'>Local de {$fila['metros']} metros cuadrados en la ciudad de " .
+                formatearCiudad($fila['ciudad'], $ciudades_formateadas) . ". <br>
+      Dirección: {$fila['calle']}, {$fila['numero']}. {$fila['cp']}, " .
+                formatearCiudad($fila['ciudad'], $ciudades_formateadas) . "<br>
       Precio: {$fila['precio']} €.</p>";
-              echo '</div>';
+              echo '</div></div>';
+
 
             }
 
