@@ -1,0 +1,19 @@
+<h1>Ejercicio 2: Selección de idioma</h1>
+<h2>Directiva estructural switch</h2>
+<p>
+  Crea un select para elegir un idioma (español, inglés, francés). Muestra un
+  saludo diferente dependiendo de la selección utilizando *ngSwitch.
+</p>
+
+<form>
+  <select [(ngModel)]="idioma" name="idioma">
+    <option value="ingles">Inglés</option>
+    <option value="espaniol">Español</option>
+    <option value="frances">Francés</option>
+  </select>
+</form>
+<div [ngSwitch]="idioma">
+  <p *ngSwitchCase="'ingles'">Hello!</p>
+  <p *ngSwitchCase="'espaniol'">¡Hola!</p>
+  <p *ngSwitchCase="'frances'">Bonjour!</p>
+</div>

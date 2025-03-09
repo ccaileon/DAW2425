@@ -1,0 +1,17 @@
+<h1>Ejercicio 3: Lista con botón de eliminar</h1>
+<h2>Directiva estructural for</h2>
+<p>
+  Muestra una lista de tareas usando *ngFor. Agrega un botón para eliminar cada
+  elemento de la lista, donde al pulsarlo desaparecerá de la lista
+</p>
+
+<div class="container">
+  <ul>
+    <li *ngFor="let tarea of listaTareas; let i = index" class="mt-3">
+      {{ formatearTareas(tarea, i) }}
+      <button class="btn btn-primary" (click)="eliminarTarea(i)">
+        Borrar Tarea
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<h1>Ejercicio 2: Numerar una lista</h1>
+<h2>Directiva estructural for</h2>
+<p>
+  Crea una lista de nombres y muéstralos con un número al lado usando index de
+  *ngFor en una ul. Intenta poner un elemento diferente en aquellos elementos
+  que estén ubicados en posiciones pares
+</p>
+
+<div class="container">
+  <ul *ngFor="let nombre of listaNombres; let i = index">
+    <li>{{ formatearNombre(nombre, i) }}</li>
+  </ul>
+</div>

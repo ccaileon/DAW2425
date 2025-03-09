@@ -1,0 +1,35 @@
+<h1>Ejercicio 3: Icono dinámico</h1>
+<h2>Directiva estructural switch</h2>
+<p>
+  Crea una variable tipoArchivo (pdf, doc, img). Usa *ngSwitch para mostrar un
+  icono diferente según el tipo de archivo seleccionado desde un select. Puedes
+  utilizar variables para guardar la ruta del icono
+</p>
+
+<form>
+  <select [(ngModel)]="archivo" name="archivo">
+    <option value="pdf">Pdf</option>
+    <option value="doc">Doc</option>
+    <option value="img">Img</option>
+  </select>
+</form>
+<div [ngSwitch]="archivo">
+  <img
+    *ngSwitchCase="'pdf'"
+    src="https://cdn-icons-png.freepik.com/256/4726/4726010.png?semt=ais_hybrid"
+    width="50px"
+    alt="pdf"
+  />
+  <img
+    *ngSwitchCase="'doc'"
+    src="https://cdn-icons-png.freepik.com/512/8242/8242986.png"
+    width="50px"
+    alt="doc"
+  />
+  <img
+    *ngSwitchCase="'img'"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Db33671g5c5QwbJRhy_SB00q3g0ScWTiDA&s"
+    width="50px"
+    alt="img"
+  />
+</div>

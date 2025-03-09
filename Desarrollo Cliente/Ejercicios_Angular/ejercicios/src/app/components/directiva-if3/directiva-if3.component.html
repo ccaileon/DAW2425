@@ -1,0 +1,24 @@
+<h1>Ejercicio 3: Mostrar mensaje según rol</h1>
+<h2>Directiva estructural if</h2>
+<p>
+  Define una variable rol en el componente. Muestra un mensaje diferente
+  dependiendo de si el usuario es "admin", "editor" o "invitado" usando *ngIf.
+</p>
+
+<form>
+  <select [(ngModel)]="tipo" name="tipo">
+    <option value="admin">Admin</option>
+    <option value="editor">Editor</option>
+    <option value="invitado">Invitado</option>
+  </select>
+
+  <p *ngIf="tipo === 'admin'">
+    Bienvenido, {{ tipo }}. Tiene muchas tareas que administrar.
+  </p>
+  <p *ngIf="tipo === 'editor'">
+    Bienvenido, {{ tipo }}. Hoy debe editar varios artículos.
+  </p>
+  <p *ngIf="tipo === 'invitado'">
+    Bienvenido, {{ tipo }}. Puede consultar la web sin necesidad de registro.
+  </p>
+</form>

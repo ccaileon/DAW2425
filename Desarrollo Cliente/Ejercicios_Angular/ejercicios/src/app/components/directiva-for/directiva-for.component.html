@@ -1,0 +1,18 @@
+<h1>Ejercicio 1: Listado de productos</h1>
+<h2>Directiva estructural for</h2>
+<p>
+  Define un array de productos en el componente y muestra la lista en la vista
+  usando *ngFor mediante cartas, donde se mostrarán todas las características
+  del elemento. Para ello, es necesario que te definas un modelo de ingrediente,
+  donde tiene como caracteristicas nombre, precio y tipo.
+</p>
+
+<div *ngFor="let producto of listaProductos" class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ producto.nombre }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      Precio: {{ producto.precio | number : "1.2-2" }}€
+    </h6>
+    <p class="card-text">Este producto es de tipo: {{ producto.tipo }}</p>
+  </div>
+</div>

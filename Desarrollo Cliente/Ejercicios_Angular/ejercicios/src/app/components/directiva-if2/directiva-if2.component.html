@@ -1,0 +1,14 @@
+<h1>Ejercicio 2: Validación de edad</h1>
+<h2>Directiva estructural if</h2>
+<p>
+  Crea un formulario con un campo para ingresar la edad. Si la edad es menor de
+  18, muestra un mensaje con `*ngIf` indicando que el acceso está restringido.
+  Una vez realizado el ejercicio, modificalo para que se muestre un mensaje
+  también en el caso de que la edad sea mayor o igual a 18
+</p>
+
+<form>
+  <label>Introduce tu edad:</label>
+  <input type="number" [(ngModel)]="edad" name="edad" />
+</form>
+<p *ngIf="mayorEdad">{{ mensaje }}</p>

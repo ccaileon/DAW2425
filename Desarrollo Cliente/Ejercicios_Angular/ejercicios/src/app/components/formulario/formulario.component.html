@@ -1,0 +1,50 @@
+<h1>Ejercicio 1: Formulario de usuario</h1>
+<p>
+  Crea un formulario con ngModel para capturar el nombre y edad de un usuario, y
+  mostrarlo en tiempo real en la vista.
+</p>
+<form>
+  <input [(ngModel)]="nombre" name="nombre" id="nombre" placeholder="Nombre" />
+  <input [(ngModel)]="edad" name="edad" id="edad" placeholder="Edad" />
+
+  <p>Nombre: {{ nombre }}</p>
+  <p>Edad: {{ edad }}</p>
+</form>
+
+<h1>Ejercicio 2: Checkbox dinámico</h1>
+<p>
+  Crea un checkbox vinculado con ngModel que controle si un mensaje debe
+  mostrarse o no en pantalla.
+</p>
+
+<form>
+  <label>
+    <input type="checkbox" [(ngModel)]="terminos" name="terminos" />
+    Acepto los términos y condiciones.
+  </label>
+
+  <p>
+    ¿Has aceptado los términos y condiciones?
+    <b>{{ terminos ? "Sí" : "No" }}</b>
+  </p>
+</form>
+
+<h1>Ejercicio 3: Selector de opciones</h1>
+<form>
+  <label>
+    Selecciona tu color favorito:
+    <select
+      [(ngModel)]="colorFavorito"
+      (ngModelChange)="verificarColor()"
+      name="colorFavorito"
+    >
+      <option value="rojo">Rojo</option>
+      <option value="amarillo">Amarillo</option>
+      <option value="verde">Verde</option>
+      <option value="azul">Azul</option>
+      <option value="naranja">Naranja</option>
+      <option value="violeta">Violeta</option>
+    </select>
+  </label>
+  <p>{{ preguntaColor }}</p>
+</form>

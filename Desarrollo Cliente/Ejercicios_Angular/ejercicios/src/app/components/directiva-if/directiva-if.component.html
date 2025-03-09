@@ -1,0 +1,14 @@
+<h1>Ejercicio 1: Mostrar u ocultar un mensaje</h1>
+<h2>Directiva estructural if</h2>
+<p>
+  Crea un botón que al hacer clic muestre u oculte un mensaje de bienvenida
+  utilizando *ngIf.
+</p>
+
+<button (click)="ocultarMensaje()" class="btn btn-primary">
+  {{ mostrarElemento ? "Ocultar Mensaje" : "Mostrar Mensaje" }}
+</button>
+
+<p *ngIf="mostrarElemento">
+  <b>{{ mensaje }}</b>
+</p>

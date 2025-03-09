@@ -1,0 +1,43 @@
+<h2>Ejercicios Angular</h2>
+
+<form>
+  <label> Elige un ejercicio para visualizarlo: </label>
+  <select [(ngModel)]="opcionSeleccionada" name="opcionSeleccionada">
+    <option value="" disabled>-- NgModel --</option>
+    <option value="formulario">Formulario de usuario</option>
+    <option value="" disabled>-- Directiva estructural if --</option>
+    <option value="mostrarOcultar">Mostrar u ocultar un mensaje</option>
+    <option value="validarEdad">Validación de edad</option>
+    <option value="mensajeRol">Mostrar mensaje según rol</option>
+    <option value="" disabled>-- Directiva estructural switch --</option>
+    <option value="estadoPedido">
+      Mostrar un mensaje según el estado del pedido
+    </option>
+    <option value="idioma">Selección de idioma</option>
+    <option value="icono">Icono dinámico</option>
+    <option value="" disabled>-- Directiva estructural for --</option>
+    <option value="listaProductos">Listado de productos</option>
+    <option value="numerarLista">Numerar una lista</option>
+    <option value="listaEliminar">Lista con botón de eliminar</option>
+  </select>
+  {{ opcionSeleccionada }}
+</form>
+
+<hr>
+
+<div [ngSwitch]="opcionSeleccionada">
+  <!-- NgModel -->
+  <app-formulario *ngSwitchCase="'formulario'"></app-formulario>
+  <!-- Ejercicios IF -->
+  <app-directiva-if *ngSwitchCase="'mostrarOcultar'"></app-directiva-if>
+  <app-directiva-if2 *ngSwitchCase="'validarEdad'"></app-directiva-if2>
+  <app-directiva-if3 *ngSwitchCase="'mensajeRol'"></app-directiva-if3>
+  <!-- Ejercicios SWITCH -->
+  <app-directiva-switch *ngSwitchCase="'estadoPedido'"></app-directiva-switch>
+  <app-directiva-switch2 *ngSwitchCase="'idioma'"></app-directiva-switch2>
+  <app-directiva-switch3 *ngSwitchCase="'icono'"></app-directiva-switch3>
+  <!-- Ejercicios FOR -->
+  <app-directiva-for *ngSwitchCase="'listaProductos'"></app-directiva-for>
+  <app-directiva-for2 *ngSwitchCase="'numerarLista'"></app-directiva-for2>
+  <app-directiva-for3 *ngSwitchCase="'listaEliminar'"></app-directiva-for3>
+</div>
