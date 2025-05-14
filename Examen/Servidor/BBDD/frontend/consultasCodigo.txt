@@ -1,0 +1,13 @@
+Añadir:
+INSERT INTO usuarios (nombre, email, edad) VALUES ('Juan', 'juan@example.com', 30);
+(Añadir en NOMBRETABLA (nombre campos) y valores de cada campo en orden)
+
+Editar:
+UPDATE usuarios SET email = 'nuevoemail@example.com', edad = 31 WHERE nombre = 'Juan';
+(Sin el where actualizas todas las entradas de la tabla con ese campo)
+
+Eliminar:
+DELETE FROM usuarios WHERE nombre = 'Juan';
+
+Ver:
+SELECT * FROM usuarios;
