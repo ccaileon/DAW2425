@@ -20,7 +20,7 @@ if (!$conexion) {
 
 $sql = "CREATE DATABASE IF NOT EXISTS eventos_tech";
 if (mysqli_query($conexion, $sql)) {
-  echo "Base de datps 'eventos_tech' creada o ya existente.";
+  echo "Base de datos 'eventos_tech' creada o ya existente.";
 } else {
   echo "Error al crear la base de datos: " . mysqli_error($conexion) . "<br>";
 }

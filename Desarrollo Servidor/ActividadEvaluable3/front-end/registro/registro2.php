@@ -77,6 +77,7 @@
           $linea = trim(fgets($usuariosRegistrados));
           if ($linea !== "") {
             list($usuario, $claveUsuario) = explode(":", $linea);
+            
             if ($usuario === $nuevoUsuario) {
               $existe = true;
               break;
@@ -85,8 +86,18 @@
         }
         fclose($usuariosRegistrados);
       }
+    
+      if ($existe) {
+        echo '
+  <div class="container mt-5 mb-5">
+  <h1>No se ha completado el registro.</h1>
+  <hr>
+   <p class="mt-5">Ese nombre de usuario se encuentra en uso, prueba con uno diferente.</p>
+   <button class="btn btn-primary mt-4" onclick="location.href=\'registro.php\'">Volver al Registro</button>
+  </div>
+  ';
 
-      if (!$existe) {
+      } else {
         $usuariosRegistrados = fopen("../../data/users/users.txt", "a");
         if ($usuariosRegistrados) {
           fwrite($usuariosRegistrados, $nombre . ":" . $clave . PHP_EOL);
@@ -101,15 +112,6 @@
   </div>
   ';
         }
-      } else {
-        echo '
-  <div class="container mt-5 mb-5">
-  <h1>No se ha completado el registro.</h1>
-  <hr>
-   <p class="mt-5">Ese nombre de usuario se encuentra en uso, prueba con uno diferente.</p>
-   <button class="btn btn-primary mt-4" onclick="location.href=\'registro.php\'">Volver al Registro</button>
-  </div>
-  ';
       }
 
 
